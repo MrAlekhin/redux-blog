@@ -4,6 +4,7 @@ import _ from 'lodash';
 export default function(state = {}, action) {
   switch (action.type) {
     case FETCH_POST:
+      console.log(action);
       const post = action.payload.data;
       return { ...state, [action.payload.data.id]: action.payload.data };
     case FETCH_POSTS:
